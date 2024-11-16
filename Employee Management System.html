@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>EMPLOYEE MANAGEMENT SYSTEM</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:"koh santepheap",sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header{
+            background-color: #1E88E5;
+            color: white;
+            padding: 1 rem;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .container{
+            display: flex;
+            min-height: 100vh;
+        }
+        nav{
+            width: 250px;
+            background-color: #1e88e5;
+            color: white;
+            padding: 1 rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 05px rgba(0,0,0,0.1);
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            margin: 20px 0;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-colour 0.3s;
+        }
+        nav ul li a:hover{
+            background-color: #1565C0;
+        }
+        main{
+            margin-left:250px;
+            padding: 2rem;
+            width: calc(100%-250px);
+            background-color: #f5f5f5;
+        }
+        .module{
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow:04px 6px rgba(0,0,0,0.1) ;
+            margin-bottom: 2rem;
+        }
+        .module h2{
+            font-size: 22px;
+            margin-bottom: 1 rem;
+            color: #1E88E5;
+        }
+        .module form label{
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .module form input,
+        .module form select{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1 rem;
+            border: 1px solid#add;
+            border-radius:6px ;
+        }
+        .module form button{
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .module form button:hover{
+            background-color: #1E88E5;
+        }
+        footer{
+            background-color: #1e88e5;
+            color: white;
+            text-align: center;
+            padding: 1 rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#finance">Finance</a></li>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#procurement">Procurement</a></li>
+                <li><a href="#leave">leave</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="Registration"class="module">
+                <h2>Registration</h2>
+                <form>
+                    <label for="employee id">Employee ID:</label><br>
+                    <input type="text"id="employee-id"name="employee-id"disabled><br>
+                    <label for="name">Name:</label><br>
+                    <input type="text"id="name" name="name"><br><br>
+                    <label for="email">Email</label>
+                    <input type="email"id="email"placeholder="enter email address">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="hr">HR</option>
+                        <option value="finance">Finance</option>
+                        <option value="it">IT</option>
+                    </select>
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+            <section id="login"class="module">
+                <h2>Login</h2>
+                <form>
+                    <label for="login-email">Email</label>
+                    <input type="email"id="login-email" place holder="Enter email address">
+                    <label for="password">Password</label>
+                    <input type="password"id="password" placeholder="Enter password">
+                    <button type="submit">login</button>
+                </form>
+            </section>
+            <section id="finance"class="module">
+                <h2>Finance</h2>
+                <p> Manage salaries,budgets and financial reports</p>
+            </section>
+            <section id="departments"class="module">
+                <h2>Departments</h2>
+                <P>view and manage department information</P>
+            </section>
+            <section id="procurement"class="module">
+                <h2>Procurement</h2>
+                <P>Track and manage procurement requests and supplies</P>
+            </section>
+            <section id="leave"class="module">
+                <h2>Leave</h2>
+                <p> Manage leave applications and approvals</p>
+            </section>
+        </main>
+    </div>
+    <footer>Employee Management System  created by <B>Shawn Dwayne </B> &copy;2024</footer>
+</body>
+</html>
